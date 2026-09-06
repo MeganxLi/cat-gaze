@@ -1,8 +1,19 @@
-# 🐱 Cat Gaze
 
-![Hana](/Users/meiyi/.gemini/antigravity/brain/956a03de-3ae3-414e-aa27-ab15f45dd1a1/hana_preview.png)
+<div align="center">
+    <h2>Cat Gaze</h2>
+</div>
 
-> Move your mouse — Hana will always be watching you.
+<p align="center">
+Move your mouse — Hana will always be watching you.
+</p>
+<img width="1164" height="624" alt="Sep-06-2026 15-55-49" src="https://github.com/user-attachments/assets/d7e79cd8-02ac-4a0b-98eb-5c84d4fa1f1c" />
+
+<p align="center">
+  <a href="https://meganxli.github.io/react-calculator/">
+    <img src="https://img.shields.io/badge/Demo_website-Your?&style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE5IDNINUMzLjg5NTQzIDMgMyAzLjg5NTQzIDMgNVYxOUMzIDIwLjEwNDYgMy44OTU0MyAyMSA1IDIxSDE5QzIwLjEwNDYgMjEgMjEgMjAuMTA0NiAyMSAxOVY1QzIxIDMuODk1NDMgMjAuMTA0NiAzIDE5IDNaIiBzdHJva2U9IiNGMkYzRjQiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik0zIDlIMjEiIHN0cm9rZT0iI0YyRjNGNCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTkgMjFWOSIgc3Ryb2tlPSIjRjJGM0Y0IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K&logoColor=ffffff&color=282828" />
+  </a>
+</p>
+
 
 ---
 
