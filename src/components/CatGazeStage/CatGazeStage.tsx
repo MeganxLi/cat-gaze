@@ -11,7 +11,7 @@ export const CAPTIONS: Record<Mode, string> = {
 }
 
 export function CatGazeStage() {
-  const [mode, setMode] = useState<Mode>('glb')
+  const [mode, setMode] = useState<Mode>('original')
   const [controlsHost, setControlsHost] = useState<HTMLDivElement | null>(null)
   return (
     <div className="cat-gaze-stage">
