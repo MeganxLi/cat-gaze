@@ -1,4 +1,3 @@
-
 <div align="center">
     <h2>Cat Gaze</h2>
 </div>
@@ -14,17 +13,36 @@ Move your mouse — Hana will always be watching you.
   </a>
 </p>
 
+### About Hana
+
+Hana is a tortoiseshell cat 🐱 with a distinctive black-and-orange coat and a pink collar.
 
 ---
 
 ## Introduction
 
-**Cat Gaze** is an interactive React component built with real cat photos.  
-The tortoiseshell cat **Hana** tracks your cursor in real time, switching to the matching gaze-direction image based on where your mouse is — creating the illusion that the cat is watching you.
+**Cat Gaze** is an interactive React project built from real cat photos.  
+The tortoiseshell cat **Hana** follows your cursor in real time, creating the illusion that the cat is watching you.
 
-### About Hana
+The page offers two switchable versions:
 
-Hana is a tortoiseshell cat 🐱 with a distinctive black-and-orange coat and a pink collar.
+| Version           | How it works                                                                                          |
+| ----------------- | ----------------------------------------------------------------------------------------------------- |
+| **GLB** (default) | A 3D head model (rendered with Three.js) turns smoothly toward the cursor while the body stays fixed. |
+| **Original**      | 8 photos are stacked; the one matching the cursor direction is shown.                                 |
+
+### GLB version controls
+
+Shown below the caption when the GLB version is active:
+
+- **左右** slider: yaw, −55° ~ 55°
+- **抬頭／低頭** slider: pitch, −30° (look up) ~ 35° (look down)
+- **跟隨滑鼠**: toggle mouse following (dragging a slider or pressing a pose button pauses it)
+- **抬頭 / 低頭 / 回正**: preset poses
+- **看頭部**: show the head model only
+- Keyboard: focus the model and use `←` `→` `↑` `↓`; `Home` resets the pose
+
+> The 3D head is an approximation built from the photos, so depth and the back of the head are not real measurements. Large side angles may look stretched.
 
 ---
 
@@ -32,6 +50,7 @@ Hana is a tortoiseshell cat 🐱 with a distinctive black-and-orange coat and a 
 
 - React 18 + TypeScript
 - Vite 5
+- Three.js (pre-bundled in `glbViewerBundle.js`, MIT license)
 - Plain CSS
 
 ---
@@ -41,22 +60,23 @@ Hana is a tortoiseshell cat 🐱 with a distinctive black-and-orange coat and a 
 ```
 cat-gaze/
 ├── public/
-│   ├── 01_up_left.png      ← upper-left
-│   ├── 02_up.png           ← up
-│   ├── 03_up_right.png     ← upper-right
-│   ├── 04_right.png        ← right
-│   ├── 05_left.png         ← left
-│   ├── 06_forward.png      ← forward (default)
-│   ├── 07_down_right.png   ← lower-right
-│   └── 08_down.png         ← down
+│   ├── 01_up_left.png ~ 08_down.png   ← 8 gaze-direction photos
+│   │                                    (06_forward.png is the default / fallback)
+│   └── hana-fixed-body.glb            ← 3D head + fixed body model
 └── src/
     ├── App.tsx                          ← root component
     ├── components/
     │   ├── CatGaze/
-    │   │   ├── CatGaze.tsx              ← core: angle calc + layer switching
-    │   │   └── CatGaze.css
+    │   │   ├── CatGaze.tsx              ← original version: angle calc + layer switching
+    │   │   ├── CatGaze.css
+    │   │   ├── GlbCatGaze.tsx           ← GLB version: viewer, sliders and pose buttons
+    │   │   ├── GlbCatGaze.css
+    │   │   ├── glbViewerBundle.js       ← bundled Three.js viewer
+    │   │   ├── glbViewerBundle.d.ts     ← viewer type declarations
+    │   │   ├── index.ts                 ← re-exports CatGaze
+    │   │   └── THREE-LICENSE.txt        ← Three.js MIT license
     │   └── CatGazeStage/
-    │       ├── CatGazeStage.tsx         ← container: owns mouse state
+    │       ├── CatGazeStage.tsx         ← container: version switch + caption + controls slot
     │       └── CatGazeStage.css
     └── hooks/
         └── useMousePosition.ts          ← custom hook to track mouse position
@@ -77,7 +97,7 @@ npm run dev
 npm run build
 ```
 
-## How It Works
+## How It Works (Original version)
 
 ```
 Mouse moves
